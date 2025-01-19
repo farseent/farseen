@@ -1,66 +1,70 @@
 import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
-import Squares from '../Specials/Squares'
+// import Squares from '../Specials/Squares'
+import MagnetLines from '../Specials/MagnetLines'
 
 export const Home = () => {
   return (
     <section
       id="home"
-      className="relative h-screen bg-black flex flex-col justify-center px-10 overflow-hidden"
+      className="relative h-screen bg-black flex flex-col justify-center px-6 md:px-10 overflow-hidden"
     >
-      {/* Squares as Background */}
-      <div className="absolute inset-0 z-0">
-        <Squares
-          speed={0.5}
-          squareSize={40}
-          direction="diagonal"
-          borderColor="#fff"
-          hoverFillColor="#222"
+      {/* Background Lines */}
+      <div className="absolute z-0 right-0 hidden md:block md:right-24 top-1/2 -translate-y-1/2">
+        <MagnetLines
+          rows={9}
+          columns={9}
+          containerSize="50vmin"
+          lineColor="#0aff9d"
+          lineWidth="0.8vmin"
+          lineHeight="5vmin"
+          baseAngle={0}
+          style={{ margin: "0 auto" }}
         />
       </div>
   
       {/* Foreground Content */}
-      <div className="relative z-10 flex flex-col justify-between w-fit text-white">
+      <div className="relative z-10 flex flex-col justify-between w-fit text-white mx-auto md:mx-0">
         <TypeAnimation
           sequence={["Farseen T"]}
           wrapper="span"
           cursor={false}
-          className="text-7xl font-bold text-left"
+          className="text-4xl md:text-7xl font-bold text-center md:text-left"
         />
         <TypeAnimation
           sequence={[1000, "I'm a React developer"]}
           wrapper="span"
           cursor={true}
-          className="text-xl tracking-widest font-semibold text-left mt-2"
+          className="text-lg md:text-xl text-[#0aff9d] tracking-widest font-semibold text-center md:text-left mt-2"
         />
-        <div className="flex mt-6 w-64 justify-between">
+        <div className="flex flex-col md:flex-row mt-6 w-full md:w-64 justify-center md:justify-between text-[#0aff9d] gap-4">
           <a href="#projects">
             <button
-              className="px-5 py-2 bg-transparent border border-white font-semibold rounded-full
-                        hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 
-                        focus:ring-offset-2 transition duration-300"
+              className="px-4 py-2 bg-transparent border border-[#0aff9d] font-semibold rounded-full
+                         hover:bg-[#0aff9d] hover:text-black focus:outline-none transition duration-300"
             >
               My Works
             </button>
           </a>
-          <a href="assets/Farseen CV-1.pdf" download="Farseen-resume.pdft">
+          <a href="assets/Farseen CV-1.pdf" download="Farseen-resume.pdf">
             <button
-              className="px-5 py-2 bg-transparent border border-white font-semibold rounded-full
-                        hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 
-                        focus:ring-offset-2 transition duration-300"
+              className="px-4 py-2 bg-transparent border border-[#0aff9d] font-semibold rounded-full
+                         hover:bg-[#0aff9d] hover:text-black focus:outline-none transition duration-300"
             >
               Resume
             </button>
           </a>
         </div>
       </div>
-      <div className="flex space-x-8 absolute bottom-4 right-4 px-4 py-2">
+  
+      {/* Social Links */}
+      <div className="flex space-x-4 absolute bottom-4 right-4 px-2 py-2 md:space-x-8">
         <a
           href="https://www.instagram.com/farseen_t/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-gray-600 hover:text-gray-300 transition duration-300"
+          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
         >
           <FaInstagram />
         </a>
@@ -68,7 +72,7 @@ export const Home = () => {
           href="https://wa.me/7736146247"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-gray-600 hover:text-gray-300 transition duration-300"
+          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
         >
           <FaWhatsapp />
         </a>
@@ -76,7 +80,7 @@ export const Home = () => {
           href="https://github.com/farseent"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-gray-600 hover:text-gray-300 transition duration-300"
+          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
         >
           <FaGithub />
         </a>
@@ -84,12 +88,14 @@ export const Home = () => {
           href="https://www.linkedin.com/in/farseent/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-gray-600 hover:text-gray-300 transition duration-300"
+          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
         >
           <FaLinkedin />
         </a>
       </div>
     </section>
   );
+  
+  
   
 }
