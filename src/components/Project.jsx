@@ -1,49 +1,76 @@
-import React from 'react'
+import React from 'react';
 
 const projects = [
-    {
-      name: 'E-Commerce App',
-      description: 'A full-stack e-commerce app with admin and user features.',
-      stack: ['React.js', 'Node.js', 'MongoDB'],
-      demo: 'https://yourapp.vercel.app',
-      github: 'https://github.com/yourusername/ecommerce-app',
-    },
-  ];
-  
+  {
+    name: 'E-Commerce App',
+    description: 'An e-commerce app with admin and user features.',
+    stack: ['React.js'],
+    demo: 'https://e-com-app-henna.vercel.app',
+    github: 'https://github.com/farseent/e-com-app',
+    image: '/assets/project-preview/e-commerce.png', // Add the image path
+  },
+  {
+    name: 'Portfolio Website',
+    description: 'A personal portfolio to showcase projects and skills.',
+    stack: ['React.js', 'Tailwind CSS'],
+    github: 'https://github.com/farseent/portfolio-website',
+    image: '/assets/project-preview/portfolio.png', // Add the image path
+  },
+];
+
 export const Project = () => {
   return (
-    <section id="projects" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section
+      id="projects"
+      className="py-16 bg-black text-white flex flex-col justify-center px-6 md:px-10"
+    >
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold text-[#0aff9d] mb-10">
+          My Projects
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-100 rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
-              <p className="text-sm text-gray-600 mb-4">
-                <strong>Tech Stack:</strong> {project.stack.join(', ')}
-              </p>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Live Demo
-              </a>
-              {' | '}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                GitHub Repo
-              </a>
+            <div
+              key={index}
+              className="bg-gray-900 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Project Image */}
+              <div className="mb-6">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-48 object-cover rounded-lg border border-gray-700"
+                />
+              </div>
+
+              {/* Project Details */}
+              <h3 className="text-2xl font-semibold mb-3">{project.name}</h3>
+              <p className="text-gray-300 mb-4">{project.description}</p>
+              
+              <div className="flex justify-center space-x-6">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-[#0aff9d] text-black font-semibold rounded-full transition hover:bg-[#05e586]"
+                  >
+                    Live Demo
+                  </a>
+                )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-transparent border border-[#0aff9d] text-[#0aff9d] font-semibold rounded-full transition hover:bg-[#0aff9d] hover:text-black"
+                >
+                  GitHub Repo
+                </a>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

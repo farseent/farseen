@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import myImage from '../assets/my-image.jpg'
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export const About = () => {
@@ -20,7 +18,7 @@ export const About = () => {
           className="md:w-1/2 flex justify-center mb-6 md:mb-0"
         >
           <img
-            src={myImage} // Replace with your image URL
+            src='assets/my-image.jpg'
             alt="Farseen"
             className="w-72 h-72 object-cover rounded-full border-2 border-[#0aff9d]"
           />
