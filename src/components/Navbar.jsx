@@ -25,13 +25,10 @@ useEffect(() => {
 
   return (
     <div>
-      <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white fixed w-full z-10 shadow-lg">
-        <div className="container mx-auto px-4 flex justify-between items-center py-4">
-          <h1 className="text-2xl font-extrabold tracking-widest uppercase">
-            Farseen
-          </h1>
+      <nav className="bg-transparent backdrop-blur-md bg-opacity-70 text-white fixed w-full z-40">
+        <div className="container mx-auto px-4 flex justify-center items-center py-4">
           <ul className="hidden md:flex space-x-8">
-            {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((section) => (
+            {['Home', 'About','Skills','Projects', 'Contact'].map((section) => (
               <li key={section}>
                 <a
                   href={`#${section.toLowerCase()}`}

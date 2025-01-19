@@ -4,17 +4,21 @@ const projects = [
   {
     name: 'E-Commerce App',
     description: 'An e-commerce app with admin and user features.',
-    stack: ['React.js'],
     demo: 'https://e-com-app-henna.vercel.app',
     github: 'https://github.com/farseent/e-com-app',
-    image: '/assets/project-preview/e-commerce.png', // Add the image path
+    image: '/assets/project-preview/e-commerce.png',
   },
   {
     name: 'Portfolio Website',
     description: 'A personal portfolio to showcase projects and skills.',
-    stack: ['React.js', 'Tailwind CSS'],
     github: 'https://github.com/farseent/portfolio-website',
-    image: '/assets/project-preview/portfolio.png', // Add the image path
+    image: '/assets/project-preview/portfolio.png',
+  },
+  {
+    name: 'Portfolio Website',
+    description: 'A personal portfolio to showcase projects and skills.',
+    github: 'https://github.com/farseent/portfolio-website',
+    image: '/assets/project-preview/portfolio.png',
   },
 ];
 

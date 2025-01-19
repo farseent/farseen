@@ -13,27 +13,32 @@ export const Contact = () => {
           Contact Me
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-start">
           {/* Left Section: Contact Info */}
-          <div className="flex flex-col justify-between m-24 pl-16">
+          <div className="flex flex-col space-y-8 md:items-center md:mt-24">
             <div className="flex items-center space-x-4">
               <FaPhoneAlt className="text-[#0aff9d] text-2xl" />
-              <p className="text-xl">+91 7736146247</p>
+              <p className="text-lg sm:text-xl">+91 7736146247</p>
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-[#0aff9d] text-2xl" />
-              <p className="text-xl">farseen.ft@gmail.com</p>
+              <p className="text-lg sm:text-xl">farseen.ft@gmail.com</p>
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-[#0aff9d] text-2xl" />
-              <p className="text-xl">Malappuram, Kerala, India</p>
+              <p className="text-lg sm:text-xl">
+                Malappuram, Kerala, India
+              </p>
             </div>
           </div>
 
           {/* Right Section: Contact Form */}
-          <form className="bg-gray-900 p-6 rounded-lg shadow-lg space-y-6">
+          <form className="bg-gray-900 p-6 md:p-8 rounded-lg shadow-lg space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold mb-2"
+              >
                 Your Name
               </label>
               <input
