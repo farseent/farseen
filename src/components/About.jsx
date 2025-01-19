@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import myImage from '../assets/my-image.jpg'
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export const About = () => {
   return (
@@ -15,17 +16,18 @@ export const About = () => {
           initial={{ opacity: 0, translateX: '-50%' }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
           className="md:w-1/2 flex justify-center mb-6 md:mb-0"
         >
           <img
             src={myImage} // Replace with your image URL
             alt="Farseen"
-            className="w-72 h-72 object-cover rounded-full border-4 border-[#0aff9d]"
+            className="w-72 h-72 object-cover rounded-full border-2 border-[#0aff9d]"
           />
         </motion.div>
-        <div className="md:w-1/2 border-l-2 border-[#0aff9d] hidden md:block"></div>
+        <div className=" border-l-2 border-[#0aff9d] hidden md:block"></div>
         {/* Right Section: Text */}
-        <div className="md:w-1/2 flex flex-col justify-center pl-0 md:pl-12">
+        <div className="md:w-1/2 flex flex-col justify-center md:pl-12">
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, translateY: '50%' }}
@@ -50,6 +52,45 @@ export const About = () => {
             My passion is crafting intuitive and efficient user experiences that make a difference. 
             If you're looking for someone to bring your ideas to life, let’s create something amazing together!
           </motion.p>
+          <motion.div 
+              initial={{ opacity: 0, translateY: '50%' }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1 }}
+              className="flex space-x-8 right-4 mt-6 ">
+                    <a
+                      href="https://www.instagram.com/farseen_t/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                    >
+                      <FaInstagram />
+                    </a>
+                    <a
+                      href="https://wa.me/7736146247"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                    >
+                      <FaWhatsapp />
+                    </a>
+                    <a
+                      href="https://github.com/farseent"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/farseent/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                    >
+                      <FaLinkedin />
+                    </a>
+          </motion.div>
         </div>
       </div>
     </section>

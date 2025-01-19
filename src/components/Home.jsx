@@ -74,7 +74,7 @@ export const Home = () => {
         whileInView={{opacity:1,translateY: 0}}
         transition={{duration:1,delay: 0.3}}
         viewport={{ once: true }}
-        className="flex space-x-4 absolute bottom-4 right-4 px-2 py-2 md:space-x-8">
+        className="flex space-x-4 absolute bottom-4 right-16 px-2 py-2 md:space-x-8">
           <a
             href="https://www.instagram.com/farseen_t/"
             target="_blank"
