@@ -110,7 +110,4 @@ export const Home = () => {
       </motion.div>
     </section>
   );
-  
-  
-  
 }
