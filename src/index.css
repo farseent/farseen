@@ -19,3 +19,8 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+/* Add this CSS to prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}

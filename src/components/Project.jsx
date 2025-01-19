@@ -11,7 +11,7 @@ const projects = [
   {
     name: 'Portfolio Website',
     description: 'A personal portfolio to showcase projects and skills.',
-    github: 'https://github.com/farseent/portfolio-website',
+    github: 'https://github.com/farseent/portfolio',
     image: '/assets/project-preview/portfolio.png',
   },
   {

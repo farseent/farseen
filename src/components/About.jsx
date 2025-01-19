@@ -55,7 +55,7 @@ export const About = () => {
               whileInView={{ opacity: 1, translateY: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
-              className="flex space-x-8 right-4 mt-6 ">
+              className="flex space-x-8 justify-center mt-6 ">
                     <a
                       href="https://www.instagram.com/farseen_t/"
                       target="_blank"

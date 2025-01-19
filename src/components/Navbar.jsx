@@ -10,7 +10,7 @@ export const Navbar = () => {
               <li key={section}>
                 <a
                   href={`#${section.toLowerCase()}`}
-                  className="text-white font-semibold tracking-wide hover:text-purple-400 transition duration-300"
+                  className="text-white font-semibold tracking-wide hover:text-[#0aff9d] transition duration-300"
                 >
                   {section}
                 </a>
