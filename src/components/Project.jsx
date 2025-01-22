@@ -19,7 +19,7 @@ const projects = [
     name: 'Login & Signup',
     description: 'Signup handler to check duplicates, add users, and navigate to the dashboard.',
     github: 'https://github.com/farseent/login-signup',
-    image: '/assets/project-preview/login.png',
+    image: '/assets/project-preview/Login.png',
   },
   {
     name: 'Todo App',
