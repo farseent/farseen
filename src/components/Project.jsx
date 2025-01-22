@@ -16,10 +16,22 @@ const projects = [
     image: '/assets/project-preview/portfolio.png',
   },
   {
-    name: 'Portfolio Website',
-    description: 'A personal portfolio to showcase projects and skills.',
-    github: 'https://github.com/farseent/portfolio-website',
-    image: '/assets/project-preview/portfolio.png',
+    name: 'Login & Signup',
+    description: 'Signup handler to check duplicates, add users, and navigate to the dashboard.',
+    github: 'https://github.com/farseent/login-signup',
+    image: '/assets/project-preview/login.png',
+  },
+  {
+    name: 'Todo App',
+    description: 'A React TodoList with add, delete, and dynamic task display.',
+    github: 'https://github.com/farseent/todo',
+    image: '/assets/project-preview/todo.png',
+  },
+  {
+    name: 'Counter App',
+    description: 'A React counter with increment, decrement, add-five, and dynamic background.',
+    github: 'https://github.com/farseent/Counter',
+    image: '/assets/project-preview/Counter.png',
   },
   
 ];
