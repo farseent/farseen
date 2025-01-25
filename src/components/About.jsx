@@ -48,19 +48,19 @@ export const About = () => {
             Hi, I’m <span className="text-[#0aff9d]">Farseen</span>. I specialize
             in <span className="font-semibold text-[#0aff9d]">React.js</span> and modern web development. 
             My passion is crafting intuitive and efficient user experiences that make a difference. 
-            If you're looking for someone to bring your ideas to life, let’s create something amazing together!
+            If you're looking for someone to bring your ideas to life, let's create something amazing together!
           </motion.p>
           <motion.div 
               initial={{ opacity: 0, translateY: '50%' }}
               whileInView={{ opacity: 1, translateY: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
-              className="flex space-x-8 justify-center mt-6 ">
+              className="flex space-x-8 justify-center mt-6 text-gray-300 ">
                     <a
                       href="https://www.instagram.com/farseen_t/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                      className="text-xl md:text-2xl hover:text-[#0aff9d] transition duration-300"
                     >
                       <FaInstagram />
                     </a>
@@ -68,7 +68,7 @@ export const About = () => {
                       href="https://wa.me/7736146247"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                      className="text-xl md:text-2xl  hover:text-[#0aff9d] transition duration-300"
                     >
                       <FaWhatsapp />
                     </a>
@@ -76,7 +76,7 @@ export const About = () => {
                       href="https://github.com/farseent"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                      className="text-xl md:text-2xl  hover:text-[#0aff9d] transition duration-300"
                     >
                       <FaGithub />
                     </a>
@@ -84,7 +84,7 @@ export const About = () => {
                       href="https://www.linkedin.com/in/farseent/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+                      className="text-xl md:text-2xl hover:text-[#0aff9d] transition duration-300"
                     >
                       <FaLinkedin />
                     </a>

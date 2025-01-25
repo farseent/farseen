@@ -59,7 +59,7 @@ export const Home = () => {
               My Works
             </button>
           </a>
-          <a href="public/assets/Farseen resume.pdf" download="Farseen-resume.pdf">
+          <a href="/assets/Farseen resume.pdf" download="Farseen-resume.pdf">
             <button
               className="px-4 py-2 bg-transparent border border-[#0aff9d] font-semibold rounded-full
                         hover:bg-[#0aff9d] hover:text-black focus:outline-none transition duration-300"
@@ -76,13 +76,13 @@ export const Home = () => {
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
         viewport={{ once: true }}
-        className="flex space-x-8 absolute bottom-6 md:bottom-4 right-4 md:right-16 px-2 py-2"
+        className="flex space-x-8 absolute bottom-6 md:bottom-4 right-4 md:right-16 px-2 py-2 text-gray-400"
       >
         <a
           href="https://www.instagram.com/farseen_t/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+          className="text-xl md:text-2xl hover:text-[#0aff9d] transition duration-300"
         >
           <FaInstagram />
         </a>
@@ -90,7 +90,7 @@ export const Home = () => {
           href="https://wa.me/7736146247"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+          className="text-xl md:text-2xl hover:text-[#0aff9d] transition duration-300"
         >
           <FaWhatsapp />
         </a>
@@ -98,7 +98,7 @@ export const Home = () => {
           href="https://github.com/farseent"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+          className="text-xl md:text-2xl  hover:text-[#0aff9d] transition duration-300"
         >
           <FaGithub />
         </a>
@@ -106,7 +106,7 @@ export const Home = () => {
           href="https://www.linkedin.com/in/farseent/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl md:text-2xl text-gray-600 hover:text-[#0aff9d] transition duration-300"
+          className="text-xl md:text-2xl hover:text-[#0aff9d] transition duration-300"
         >
           <FaLinkedin />
         </a>

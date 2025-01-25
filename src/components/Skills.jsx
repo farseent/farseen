@@ -6,9 +6,9 @@ export const Skills = () => {
     { name: 'HTML', level: 90 },
     { name: 'CSS', level: 85 },
     { name: 'JavaScript', level: 80 },
-    { name: 'React.js', level: 95 },
+    { name: 'React.js', level: 85 },
     { name: 'Tailwind CSS', level: 90 },
-    { name: 'Git', level: 60}
+    { name: 'Git', level: 70}
   ];
 
   const midpoint = Math.ceil(skills.length / 2);
