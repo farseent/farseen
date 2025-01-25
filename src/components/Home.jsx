@@ -39,9 +39,12 @@ export const Home = () => {
           className="text-4xl md:text-7xl font-bold text-center md:text-left"
         />
         <TypeAnimation
-          sequence={[1000, "I'm a React developer"]}
+          sequence={[1000, "I'm a React developer",
+                      1000, "I'm a Web Developer",
+                    ]}
           wrapper="span"
-          cursor
+          cursor = {true}
+          repeat={Infinity}
           className="text-lg md:text-xl text-[#0aff9d] tracking-widest font-semibold text-center md:text-left mt-2"
         />
         <motion.div
