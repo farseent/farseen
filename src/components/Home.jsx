@@ -62,7 +62,7 @@ export const Home = () => {
               My Works
             </button>
           </a>
-          <a href="/assets/Farseen resume.pdf" download="Farseen-resume.pdf">
+          <a href="/assets/Farseen resume.pdf">
             <button
               className="px-4 py-2 bg-transparent border border-[#0aff9d] font-semibold rounded-full
                         hover:bg-[#0aff9d] hover:text-black focus:outline-none transition duration-300"
