@@ -39,8 +39,10 @@ export const Home = () => {
           className="text-4xl md:text-7xl font-bold text-center md:text-left"
         />
         <TypeAnimation
-          sequence={[1000, "I'm a React developer",
+          sequence={[1000, "I'm a Full stack Developer",
                       1000, "I'm a Web Developer",
+                      1000, "I'm a MERN stack Developer",
+                      1000, "I'm a Software Engineer",
                     ]}
           wrapper="span"
           cursor = {true}

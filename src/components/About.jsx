@@ -46,7 +46,7 @@ export const About = () => {
             className="text-lg md:text-xl text-gray-300 leading-relaxed"
           >
             Hi, I’m <span className="text-[#0aff9d]">Farseen</span>. I specialize
-            in <span className="font-semibold text-[#0aff9d]">React.js</span> and modern web development. 
+            in <span className="font-semibold text-[#0aff9d]">MERN Stack</span> and modern web development. 
             My passion is crafting intuitive and efficient user experiences that make a difference. 
             If you're looking for someone to bring your ideas to life, let's create something amazing together!
           </motion.p>
