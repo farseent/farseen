@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Farseen T — Portfolio v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modernized personal portfolio. React + Vite + Tailwind + Framer Motion.
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev
+```
 
-### `npm start`
+## What changed from v1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Proper mobile navigation (hamburger menu, active-section highlighting)
+- Design system: centralized colors/fonts in `tailwind.config.js`, no repeated
+  magic values across components
+- Sections sized to their content instead of forced `h-screen`
+- Accessibility: `aria-label`s on icon links, visible focus rings, a skip-link,
+  semantic `<header>` / `<main>` / `<footer>`
+- SEO: full meta tags + Open Graph/Twitter cards in `index.html`
+- Rewritten copy that foregrounds your actual differentiators (ICOTL-26 paper,
+  GeoSentinel, the in-progress ticket/booking system) instead of generic
+  "MERN stack developer" boilerplate
+- Projects swapped: dropped MediRemind / basic auth app / e-commerce clone in
+  favor of GeoSentinel, the ticket confirmation system, TransitHub, and Gidy
+  Profile — these better represent your current skill level
+- New Research section calling out the ICOTL-26 publication specifically
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Still needs from you
 
-### `npm test`
+1. **Images**: drop real screenshots into `public/assets/` — the design
+   currently uses monospace metadata tags instead of images so nothing looks
+   broken until you add them. Recommended: 1200×750px, WebP format.
+2. **Resume**: add `Farseen-Resume.pdf` to `public/assets/`.
+3. **Contact form**: sign up for [EmailJS](https://www.emailjs.com/) (free
+   tier is enough), then uncomment the `emailjs.send(...)` call in
+   `src/components/Contact.jsx` and fill in your service/template/public keys.
+4. **OG image**: add `public/assets/og-cover.jpg` (1200×630px) so link
+   previews on LinkedIn/Twitter look intentional.
+5. **Favicon**: add `public/assets/favicon.png`.
+6. Double check `demo` links in `src/components/Projects.jsx` — several are
+   currently `null` since I didn't have live URLs for them in context.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+Works as-is on Vercel or Netlify — just point either at this repo, build
+command `npm run build`, output directory `dist`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Performance notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Images should be lazy-loaded (`loading="lazy"`) and given explicit
+  width/height once you add them, to avoid layout shift.
+- Consider `vite-plugin-image-optimizer` if screenshots are large.
+- Fonts are loaded via Google Fonts `<link>` in `index.html` with
+  `preconnect` hints already in place.
