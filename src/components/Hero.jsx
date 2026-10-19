@@ -129,6 +129,7 @@ export const Hero = () => (
       <div className="flex flex-col sm:flex-row sm:flex-wrap divide-y divide-line sm:divide-y-0 sm:divide-x sm:divide-line font-mono text-xs text-muted border-t border-line pt-2 sm:pt-6">
         <span className="py-3 sm:py-0 sm:pr-8 first:pt-0">IET, University of Calicut</span>
         <span className="py-3 sm:py-0 sm:px-8">ICOTL-26 Published Research</span>
+        <span className="py-3 sm:py-0 sm:px-8">Build Epik</span>
         <span className="py-3 sm:py-0 sm:px-8">Bridgeon Solutions</span>
         <span className="py-3 sm:py-0 sm:pl-8 last:pb-0">ModelSuite AI</span>
       </div>

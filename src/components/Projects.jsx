@@ -15,13 +15,33 @@ export const PROJECTS = [
   },
   {
     name: 'Ticket Confirmation System',
-    tag: 'IN PROGRESS',
+    tag: 'SOLO BUILD',
     description:
-      'A multi-role booking workflow with a state machine for ticket lifecycle, round-robin dispatch for confirmations, immutable audit logging, and live flight search via the Duffel API with INR/USD conversion. Containerized with Docker and CI/CD.',
+      'A multi-role booking workflow built end-to-end solo — frontend, backend, and database — with a state machine for ticket lifecycle, round-robin dispatch for confirmations, immutable audit logging, and live flight search via the Duffel API with INR/USD conversion. Containerized with Docker and CI/CD.',
     meta: ['MERN', 'DUFFEL API', 'JWT + COOKIES', 'DOCKER', 'CI/CD'],
-    github: 'https://github.com/farseent',
+    github: 'https://github.com/farseent/ticket',
     demo: null,
-    note: 'Most technically involved project to date',
+    note: 'Built solo as an evaluation project for a MERN internship',
+  },
+  {
+    name: 'Managing Director Dashboard',
+    tag: 'PROFESSIONAL',
+    description:
+      'The MD-level module of a large internal ERP platform used across Trippens Holidays operations, spanning 19+ staff roles — from client onboarding to itinerary creation and ticket booking. Built the frontend (React, Tailwind CSS) for multiple pages — Expense, Receipt, Target, Product, and Payment — with reusable component patterns, mock-to-real API integration, and Recharts data visualization.',
+    meta: ['REACT', 'TAILWIND CSS', 'RECHARTS'],
+    github: null,
+    demo: null,
+    note: 'Built during MERN Stack internship at Build Epik',
+  },
+  {
+    name: 'India Tour Map Filter',
+    tag: 'PROFESSIONAL',
+    description:
+      'An interactive, state-wise filtering feature built into the official Trippens Holidays website, using an India map to let visitors browse tours by state.',
+    meta: ['REACT', 'SVG'],
+    github: null,
+    // demo: 'https://trippensholidays.com/categories/68ad71659f92ae4d957a54b9',
+    note: 'Built during MERN Stack internship at Build Epik',
   },
   {
     name: 'TransitHub',
@@ -72,14 +92,16 @@ const ProjectCard = ({ project, index }) => (
     </div>
 
     <div className="flex gap-4 mt-6 pt-5 border-t border-line">
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 text-sm hover:text-white transition-colors"
-      >
-        <FaGithub size={15} /> Code
-      </a>
+      {project.github && (
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-sm hover:text-white transition-colors"
+        >
+          <FaGithub size={15} /> Code
+        </a>
+      )}
       {project.demo && (
         <a
           href={project.demo}
